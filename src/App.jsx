@@ -1,12 +1,18 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Products from "./components/Products";
+import Details from "./components/Details";
 
 const App = () =>{
 
 
   return(
-    <div>
-      <h1>Context Api</h1>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/product" element={<Products />} />
+          <Route path="/details" element={<Details />} />
+        </Routes>
+    </BrowserRouter>
   )
 
 
